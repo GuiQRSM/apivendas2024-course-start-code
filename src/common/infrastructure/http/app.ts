@@ -1,11 +1,11 @@
-import express from 'express'
 import cors from 'cors'
-import { routes } from './rouetes';
+import express from 'express'
+import { routes } from './routes'
 
-const app = express();
+const app = express()
 
-app.use(...handlers: cors())
-app.use(...handlers: express.json)
-app.use(...handlers: routes)
+app.use(cors())
+app.use(express.json())
+app.use(routes)
 
 export { app }
