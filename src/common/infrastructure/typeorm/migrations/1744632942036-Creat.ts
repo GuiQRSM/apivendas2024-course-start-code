@@ -2,7 +2,7 @@ import { MigrationInterface, QueryRunner, Table } from 'typeorm'
 
 export class Creat1744632942036 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.query(`CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`)
+    await queryRunner.query(`CREATE  EXTENSION IF NOT EXISTS "uuid-ossp";`)
     await queryRunner.createTable(
       new Table({
         name: 'products',
@@ -35,8 +35,8 @@ export class Creat1744632942036 implements MigrationInterface {
           /*INFRMACOES REFERENTE AO CAMPO DATA DE CRIACAO*/
           {
             name: 'created_at',
-            type: 'timestamp',
-            default: 'now()',
+            type: 'tmestamp',
+            default: 'CURRENT_TIMESTAMP',
           },
           /*INFRMACOES REFERENTE AO CAMPO DATA DE ATUALIZACAO */
           {
