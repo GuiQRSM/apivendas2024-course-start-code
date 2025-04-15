@@ -22,9 +22,9 @@ export class Product implements ProductModel {
   @Column('int')
   quantity: number
 
-  @CreateDateColumn('created_at')
+  @CreateDateColumn({ name: 'created_at' })
   created_at: Date
 
-  @UpdateDateColumn('updated_at')
+  @UpdateDateColumn({ name: 'updated_at' })
   updated_at: Date
 }
