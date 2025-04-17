@@ -19,7 +19,7 @@ export abstract class InMemoryRepository<Model extends ModelProps>
   implements RepositoriesInterface<Model, CreateProps>
 {
   itens: Model[] = []
-  sortable: string[] = []
+  sortableFields: string[] = []
   create(props: CreateProps): Model {
     throw new Error('Method not implemented.')
   }
