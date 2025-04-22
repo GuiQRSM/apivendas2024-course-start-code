@@ -13,6 +13,8 @@ export type SearchOutput<Model> = {
   total: number
   current_page: number
   sort: string | null
+  sort_dir: string | null
+  per_page: number
   filter: string | null
 }
 
