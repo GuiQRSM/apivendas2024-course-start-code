@@ -85,7 +85,7 @@ export abstract class InMemoryRepository<Model extends ModelProps>
     filter: string | null,
   ): Promise<Model[]>
 
-  protected abstract async applySort(
+  protected async applySort(
     items: Model[],
     sort: string | null,
     sort_dir: string | null,
